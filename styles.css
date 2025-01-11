@@ -1,0 +1,99 @@
+/* General body styling */
+/* Background animation */
+body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Animated background gradient */
+.bg-animation {
+    background: linear-gradient(45deg, #007bff, #6c757d, #17a2b8);
+    background-size: 400% 400%;
+    animation: gradient-animation 8s ease infinite;
+}
+
+/* Card styling */
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    animation: fade-in 1.5s ease-out;
+}
+
+/* Button hover effect */
+.btn-primary {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+
+/* Animations */
+
+/* Background gradient animation */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Fade-in effect */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-down effect */
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Input grow effect */
+@keyframes grow {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Classes for animations */
+.animate-fade-in {
+    animation: fade-in 1.2s ease-out;
+}
+
+.animate-slide-down {
+    animation: slide-down 1.2s ease-out;
+}
+
+.animate-grow {
+    animation: grow 1.2s ease-out;
+}
+
+.animate-hover:hover {
+    transform: scale(1.05);
+}
